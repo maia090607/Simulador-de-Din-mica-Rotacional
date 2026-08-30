@@ -30,7 +30,7 @@
     }
 
     .portal-container {
-      max-width: 900px;
+      max-width: 1000px;
       width: 100%;
       padding: 24px;
       box-sizing: border-box;
@@ -72,10 +72,6 @@
       border-color: var(--accent-purple);
     }
 
-    .module-card.upcoming {
-      opacity: 0.75;
-    }
-
     .module-badge {
       display: inline-block;
       padding: 4px 8px;
@@ -88,7 +84,6 @@
     }
 
     .badge-active { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); border: 1px solid rgba(59, 130, 246, 0.3); }
-    .badge-soon { background: rgba(234, 179, 8, 0.15); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.3); }
 
     .module-card h3 {
       color: var(--text-bright);
@@ -117,7 +112,6 @@
     }
 
     .module-btn:hover { background: #7c3aed; }
-    .module-btn.disabled { background: var(--ide-border); color: var(--text-main); cursor: not-allowed; }
   </style>
 </head>
 <body>
@@ -127,24 +121,24 @@
     <p class="subtitle">Selecciona el módulo analítico que deseas desplegar y configurar</p>
 
     <div class="modules-grid">
-      <!-- Módulo Activo: Conecta directamente con tu simulador rotacional -->
+      <!-- Módulo Rotacional -->
       <div class="module-card">
         <div>
           <span class="module-badge badge-active">Módulo Activo</span>
           <h3>Cuerpos Rotacionales y Dinámica</h3>
           <p>Simulador avanzado con vectores de momento angular, torques netos, análisis epistemológico y control de geometrías 3D en tiempo real.</p>
         </div>
-        <a href="rotacion.html" class="module-btn">Iniciar Simulador 3D</a>
+        <a href="rotacion.html" class="module-btn">Iniciar Simulador Rotacional</a>
       </div>
 
-      <!-- Módulo Próximo -->
-      <div class="module-card upcoming">
+      <!-- Módulo de Colisiones Espaciales -->
+      <div class="module-card">
         <div>
-          <span class="module-badge badge-soon">Próximamente</span>
-          <h3>Colisiones Elásticas e Inelásticas</h3>
-          <p>Entorno interactivo para el estudio de conservación de cantidad de movimiento y energía cinética en choques unidimensionales y bidimensionales.</p>
+          <span class="module-badge badge-active">Módulo Nuevo</span>
+          <h3>Colisiones Espaciales (Elásticas e Inelásticas)</h3>
+          <p>Simulador orbital 3D basado en la conservación del momento lineal ($\vec{p} = m\cdot\vec{v}$), inercia de masas y leyes de impacto espacial.</p>
         </div>
-        <a href="#" class="module-btn disabled" onclick="alert('Este módulo se añadirá en la siguiente fase del proyecto.'); return false;">En Desarrollo</a>
+        <a href="collisions.html" class="module-btn">Iniciar Simulador de Colisiones</a>
       </div>
     </div>
   </div>
